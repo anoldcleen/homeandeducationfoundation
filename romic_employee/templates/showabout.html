@@ -1,0 +1,435 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static%}
+<div class="container">
+
+  <div class="pagetitle">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#"><strong>Home</strong></a></li>
+          <li class="breadcrumb-item"><strong>Show About Home and Education Foundation</strong></li>
+          
+        </ol>
+      </nav>
+    </div>
+
+ <h4><strong>What We Are</strong></h4>
+
+   <section class="section"> 
+    <div class="container">
+      <div class="column">
+
+
+        <div class="col-xl-12">
+              {% for about in abouts%}
+            <div>
+                <div class="card" >
+     
+              <div class="card-body">
+
+            <strong>PROJECT NAME :</strong>
+            {% for about in abouts%}
+           
+                  <strong>{{ about.projectname }}</strong>
+
+                  {% endfor %}
+ 
+ 
+                </div>
+
+
+                      <div class="card-body">
+
+               <strong>PROJECT MISSION :</strong>
+                {% for about in abouts%}
+             
+                  <p class="small fst-italic">{{ about.mission }}</p>
+               
+                        {% endfor %}
+            </div>
+        <div class="card-body">
+
+               <strong>PROJECT VISION :</strong>
+     
+                  <p class="small fst-italic">{{ about.vision }}</p>
+                  
+
+                </div>
+
+
+
+            </div>
+            </div>
+            </section>
+            <br/>
+            <br/>
+
+
+
+
+ <h4><strong>Objectives</strong></h4>
+   <section class="section"> 
+    <div>
+    <div class="container">
+      <div class="column">
+
+
+        <div class="col-xl-12">
+               
+         <div class="card">
+
+
+                      <div class="card-body">
+
+               <strong>OBJECTIVE  1:</strong>
+                 
+                  <p class="small fst-italic"><strong>{{ about.objective1 }}</strong></p>
+              
+ </div>
+         
+                      <div class="card-body">
+
+               <strong>OBJECTIVE  2:</strong>
+      
+                  <p class="small fst-italic">{{ about.objective2 }}</p>
+              
+ 
+            </div>
+        <div class="card-body">
+
+               <strong>OBJECTIVE 3:</strong>
+             
+                  <p class="small fst-italic">{{ about.objective3 }}</p>
+           
+ 
+                </div>
+
+                 <div class="card-body">
+
+               <strong>OBJECTIVE 4:</strong>
+      
+                  <p class="small fst-italic">{{ about.objective4 }}</p>
+   
+ 
+                </div>
+
+                 <div class="card-body">
+
+               <strong>OBJECTIVE 5:</strong>
+             
+
+                  <p class="small fst-italic">{{ about.objective5 }}</p>
+            
+ 
+                </div>
+                
+
+            </div>
+
+            </section>
+             <br/>
+            <br/>
+
+  <h4><strong>Contacts / Location Details</strong></h4>
+   <section class="section"> 
+    <div>
+    <div class="container">
+      <div class="column">
+
+
+        <div class="col-xl-12">
+            <div>
+              
+      <div class="card">
+               
+       
+           
+
+                      <div class="card-body">
+
+               <strong>CONTACT  1:</strong>
+        
+                  <p class="small fst-italic">{{ about.location1 }}</p>
+             
+ 
+            </div>
+      
+                      <div class="card-body">
+
+               <strong>CONTACT  2:</strong>
+            
+                  <p class="small fst-italic">{{ about.location2 }}</p>
+       
+ 
+            </div>
+        
+            <div class="card">
+        <div class="card-body">
+
+               <strong>LOCATION 1:</strong>
+       
+                  <p class="small fst-italic">{{ about.contact1 }}</p>
+               
+ 
+                </div>
+
+                 <div class="card-body">
+
+               <strong>LOCATION 2:</strong>
+            
+                  <p class="small fst-italic">{{ about.contact2 }}</p>
+                
+ 
+                </div>
+
+              </div>
+
+            </div>
+            </div>
+
+            </section>
+             <br/>
+            <br/>
+ 
+
+
+
+            <section class="section"> 
+             
+              
+ 
+      <h4><strong>Testimonials</strong></h4>
+       <div class="card">
+                <div class="container">
+
+        <div class="col-xl-12">
+           
+     
+              <div class="card-body">
+
+            <strong>TESTIMONIAL:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.testimonial1 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialrole1 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialdecription1 }}</p>
+          
+
+                </div>
+
+      
+                      <div class="card-body">
+
+               <strong>TESTIMONIAL  2:</strong>
+  
+                  <p class="small fst-italic">{{ about.testimonial2 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialrole2 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialdecription2 }}</p>
+       
+ 
+            </div>
+        <div class="card-body">
+
+               <strong>TESTIMONIAL 3:</strong>
+
+     
+                  <p class="small fst-italic">{{ about.testimonial3 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialrole3 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialdecription3 }}</p>
+             
+
+                </div>
+
+                 <div class="card-body">
+
+               <strong>TESTIMONIAL 4:</strong>
+           
+         
+                  <p class="small fst-italic">{{ about.testimonial4 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialrole4 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialdecription4 }}</p>
+    
+ 
+                </div>
+
+                 <div class="card-body">
+
+               <strong>TESTIMONIAL 5:</strong>
+        
+                  <p class="small fst-italic">{{ about.testimonial5 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialrole5 }}</p>
+                  <p class="small fst-italic">{{ about.testimonialdecription5}}</p>
+         
+                 
+                </div>
+                </div>
+
+            </div>
+               
+          </div>
+          <br/>
+          <br/>
+
+
+      <h4><strong>Donation Estimates</strong></h4>
+       <div class="card">
+                <div class="container">
+
+        <div class="col-xl-12">
+           
+     
+              <div class="card-body">
+
+            <strong> Education:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.Amount1 }}</p>
+                  <p class="small fst-italic">{{ about.status1 }}</p>
+                  
+          
+
+                </div>
+
+
+              <div class="card-body">
+
+            <strong>Gender Equity:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.Amount2 }}</p>
+                  <p class="small fst-italic">{{ about.status2 }}</p>
+                 
+
+                </div>
+
+                   <div class="card-body">
+
+            <strong>Climate Change:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.Amount6 }}</p>
+                  <p class="small fst-italic">{{ about.status6 }}</p>
+                 
+
+                </div>
+
+                   <div class="card-body">
+
+            <strong>Sustainable Development:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.Amount3 }}</p>
+                  <p class="small fst-italic">{{ about.status3 }}</p>
+                 
+
+                </div>
+                   <div class="card-body">
+
+            <strong>Health:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.Amount4 }}</p>
+                  <p class="small fst-italic">{{ about.status4 }}</p>
+                 
+
+                </div>
+                   <div class="card-body">
+
+            <strong>Skills:</strong>
+     
+                  <p  class="small fst-italic">{{ about.Amount5 }}</p>
+                  <p class="small fst-italic">{{ about.status5 }}</p>
+                 
+
+                </div>
+            </div>
+        </div>
+ </div>
+ <br/>
+
+         <h4><strong>Progress</strong></h4>
+       <div class="card">
+                <div class="container">
+
+        <div class="col-xl-12">
+           
+     
+              <div class="card-body">
+
+            <strong>Gender Equity:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.genderequity }}</p>
+                  
+                  
+          
+
+                </div>
+
+
+              <div class="card-body">
+
+            <strong>Skills:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.skills }}</p>
+                  
+                 
+
+                </div>
+
+                   <div class="card-body">
+
+            <strong>Education:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.education }}</p>
+                 
+
+                </div>
+                   <div class="card-body">
+
+            <strong>Climate Change:</strong>
+     
+            
+                  <p  class="small fst-italic">{{ about.climatechange }}</p>
+                
+
+                </div>
+                   <div class="card-body">
+
+            <strong>Homes:</strong>
+     
+                  <p  class="small fst-italic">{{ about.livelihoods }}</p>
+              
+
+                </div>
+                       <div class="card-body">
+
+            <strong>Sustainable Development:</strong>
+     
+                  <p  class="small fst-italic">{{ about.sustainabledevelopment }}</p>
+              
+
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <br/>
+    <br/>
+ <center> <a href="/deleteabout/{{ about.id }}" class=" btn btn-danger" ><strong>Delete About  Data </strong></a></center>
+
+
+
+            </section>
+             <br/>
+            <br/>
+
+
+             {% endfor %}
+                   <center> <a href="/about" class=" btn btn-primary" ><strong>Create About  Data </strong></a></center>
+
+                   <br/>
+                   <br/>
+    {% endblock %}

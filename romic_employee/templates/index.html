@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="pagetitle">
+      <strong>ROCAF</strong>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/show">Employee</a></li>
+          <li class="breadcrumb-item"><strong>Add New Staff</strong></li>
+          
+        </ol>
+      </nav>
+    </div>
+
+
+<form method="POST" class="post-form" action="/emp">  
+        {% csrf_token %}  
+    <div class="card-body">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <strong>ENTER EMPLOYEE DETAILS</strong>  
+    </div>  
+  </div>  
+    
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> EMPLOYEE NAME:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.ename }} 
+      </div> 
+    </div>  
+  </div>
+  <br/>
+       <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> EMPLOYEE EMAIL ADDRESS:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.eemail }} 
+      </div> 
+    </div>  
+  </div>
+</br>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  EMPLOYEE CONTACT:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.econtact }} 
+      </div> 
+    </div>  
+  </div>
+  <br/>
+
+ 
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> EMPLOYEE BRIEF DESCRIPTION:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.edescription }} 
+      </div> 
+    </div>  
+  </div>
+
+  <br/>
+  
+
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-12">  
+    <center><button type="submit" class="btn btn-success"><strong>UPLOAD STAFF DETAILS </strong></button></center> 
+    </div>  
+  </div>  
+    </div>  
+</form>  
+
+{% endblock %}

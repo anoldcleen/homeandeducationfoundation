@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card-body">
+
+    <div class="form-group col">  
+    <label class="row-sm-12 col-form-label row-lg-20"></label>  
+    <div class="col-sm-12">  
+    <h3><strong>B L O G S     </strong></h3> 
+    <p> <strong>Add Blogs </strong></p> 
+    </div>  
+  </div> 
+
+
+<form method="POST" class="post-form" action="/blog">  
+        {% csrf_token %}  
+   
+
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> BLOG TITLE:  </strong></label>  
+     <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.btitle }} 
+      </div> 
+    </div>  
+  </div> 
+
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> BLOG AUTHOR:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.bauthor }} 
+      </div> 
+    </div>  
+  </div> 
+ 
+      <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> BLOG DESCRIPTION:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.bdescription }} 
+      </div> 
+    </div>  
+  </div> 
+
+  
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> BLOG YOUTUBE LINK:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.byoutubelink }} 
+      </div> 
+    </div>  
+  </div>
+
+    
+<br/>
+<br/>
+
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-12">  
+    <button type="submit" class="btn btn-success">Upload Blog</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+
+
+
+{% endblock %}

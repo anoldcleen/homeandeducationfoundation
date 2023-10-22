@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="pagetitle">
+      <h2><strong>HOME AND EDUCATION FOUNDATION UGANDA</strong></h>
+      <nav>
+         <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/emp"><strong>Service</strong></a></li>
+          <li class="breadcrumb-item"><strong> Edit Service</strong> </li>
+        
+        </ol>
+      </nav>
+    </div>
+
+
+
+<form method="POST" class="post-form" action="/updateservice/{{service.id}}">  
+        {% csrf_token %}  
+
+    <div class="card-body">  
+ <div class="form-group col">  
+    <label class="row-sm-12 col-form-label row-lg-20"></label>  
+    <div class="col-sm-12">  
+    <h3><strong>ROCAF </strong></h3> 
+ 
+    </div>  
+  </div> 
+
+ 
+<div class="card">
+ <div class="container"> 
+   
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> SERVICE TITLE:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="servicetitle" id="id_servicetitle" required maxlength="50" value="{{ service.servicetitle }}"/>  
+    </div>  
+  </div>  
+</div>
+  <br/>
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> SERVICE DESCRIPTION:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="servicedescription" id="id_servicedescription" required maxlength="100" value="{{ service.servicedescription }}" />  
+    </div> 
+    </div> 
+  </div> 
+
+  <br/> 
+ 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> SERVICE IMAGE:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+          {{ service.service_main_img  }}
+    </div>
+    </div>  
+  </div>  
+</div>
+    <br/> 
+ </div>
+
+<br/>
+<br/>
+
+ <div class="card">
+ <div class="container"> 
+   
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> O V C  TITLE:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+          <input type="text" name="ovctitle" id="id_ovctitle" required maxlength="50" value="{{ service.ovctitle }}"/>  
+    </div>  
+  </div>  
+</div>
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> O V C DESCRIPTION:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="ovcdescription" id="id_ovctitle" required maxlength="100" value="{{ service.ovctitle }}" />
+    </div> 
+    </div> 
+  </div> 
+
+  <br/> 
+ 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> O V C  IMAGE:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+          {{ service.ovc_main_img  }}
+    </div>
+    </div>  
+  </div>  
+</div>
+    <br/> 
+ </div>
+
+<br/>
+<br/>
+
+<div class="card">
+ <div class="container"> 
+   
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> ACTIVITY TITLE:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+         <input type="text" name="activitytitle" id="id_activitytitle" required maxlength="50" value="{{ service.activitytitle }}"/>  
+    </div>  
+  </div>  
+</div>
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> ACTIVITY DESCRIPTION:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="activitydescription" id="id_activitydescription" required maxlength="100" value="{{ service.activitydescription }}" />
+    </div> 
+    </div> 
+  </div> 
+
+  <br/> 
+ 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> ACTIVITY IMAGE:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+         {{ service.activity_main_img  }}
+    </div>
+    </div>  
+  </div>  
+</div>
+    <br/> 
+ </div>
+
+ <br/> 
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <center><button type="submit" class="btn btn-danger"><strong>EDIT Service </strong></button></center>  
+
+    </div>  
+  </div>  
+    </div>  
+</form>
+</div>
+{% endblock %}

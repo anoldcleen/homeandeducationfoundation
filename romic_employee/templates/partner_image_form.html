@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="card-body">
+
+   <div class="pagetitle">
+      <h3>ROCAF</h3>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/showpartner"><strong>Show Partners</strong></a></li>
+          <li class="breadcrumb-item"><strong>Add Recent Partner</strong></li>
+          
+        </ol>
+      </nav>
+    </div>
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+          <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Partner Name:  </strong></label>  
+     <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.partnername }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+  <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  Partner Image:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card-body"> 
+        
+      {{ form.partner_main_img }}
+      </div> 
+    </div>  
+  </div> 
+
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  Partner Description:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.partnerdescription }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+
+
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-12">  
+    <center><button type="submit" class="btn btn-success">Upload Partner</button></center>  
+    </div>  
+  </div>  
+    </div>  
+</form> 
+</div>
+</section>
+
+
+{% endblock %}

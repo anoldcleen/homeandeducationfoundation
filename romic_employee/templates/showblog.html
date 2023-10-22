@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+  <div class="pagetitle">
+      <h4 ><strong>BLOGS</strong></h4>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dashboard"><strong>Home</strong></a></li>
+          <li class="breadcrumb-item"><strong>Blogs</strong></li>
+        
+        </ol>
+      </nav>
+    </div>
+
+      <section class="section">
+      <div class="column">
+
+<table class="table table-striped table-bordered table-striped">  
+    <thead>  
+    <tr>  
+        <th>BLOG TITLE</th>  
+        <th>BLOG AUTHOR</th>  
+        <th>BLOG DESCRIPTION </th> 
+        <th>BLOG  YOUTUBE LINK</th>
+
+     
+      
+        <th>Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for blog in blogs %}  
+    <tr>  
+       
+        <td>{{ blog.btitle }}</td>  
+        <td>{{ blog.bauthor }}</td>  
+        <td>{{ blog.bdescription }}</td> 
+        <td>{{ blog.byoutubelink }}</td>
+
+       
+
+       
+        <td>  
+            <a href="/editblog/{{ blog.id }}"><span class="glyphicon glyphicon-pencil" > <strong>EDIT Blog </strong></span></a>  
+            <br/>
+            <br/>
+
+            <a href="/deleteblog/{{ blog.id }}"><strong>DELETE Blog </strong></a>  
+
+
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+</div>
+   <center><a href="/blog" class="btn btn-success">ADD New Blog</a></center> 
+</section>
+
+
+
+</div>
+
+{% endblock %}
+
+

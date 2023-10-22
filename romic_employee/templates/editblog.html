@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method="POST" class="post-form" action="/updateblog/{{blog.id}}">  
+        {% csrf_token %}  
+
+        <div class="container">  
+
+             <div class="form-group col">  
+    <label class="row-sm-12 col-form-label row-lg-20"></label>  
+    <div class="col-sm-12">  
+    <h3><strong>HOME AND EDUCATION FOUNDATION UGANDA    </strong></h3> 
+    <p> <strong>Update Blogs  </strong></p> 
+    </div>  
+  </div> 
+ <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> BLOG TITLE:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="btitle" id="id_btitle" required maxlength="100" value="{{ blog.btitle }}" />  
+    </div>  
+</div>
+  </div>  
+
+<br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> BLOG AUTHOR:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="bauthor" id="id_bauthor" required maxlength="100" value="{{ blog.bauthor }}" />  
+    </div>  
+</div>
+  </div>  
+
+<br/>
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> BLOG DESCRIPTION:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="bdescription" id="id_bdescription" required maxlength="254" value="{{ blog.bdescription }}" />  
+    </div>  
+</div>
+</div>
+
+<br/>
+
+<div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> BLOG YOUTUBE LINK:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="byoutubelink" id="id_byoutubelink" required maxlength="254" value="{{ blog.byoutubelink }}" />  
+    </div>  
+ 
+  </div> 
+</div>
+  <br/> 
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <center><button type="submit" class="btn btn-danger"><strong>EDIT Blog </strong></button></center>  
+
+    </div>  
+  </div>  
+    </div>  
+</form>  
+
+{% endblock %}

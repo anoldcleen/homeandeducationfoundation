@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/contact"><stong>showcontact Comments</strong></a></li>
+          <li class="breadcrumb-item"><strong>Respond</strong> </li>
+               
+        </ol>
+      </nav>
+
+<form method="POST" class="post-form" action="/updatecontact/{{contact.id}}">  
+        {% csrf_token %}  
+
+        <div class="container">  
+
+             <div class="form-group col">  
+    <label class="row-sm-12 col-form-label row-lg-20"></label>  
+    <div class="col-sm-12">  
+    <h3><strong> HOME AND EDUCATION FOUNDATION UGANDA </strong></h3> 
+    <p> <strong>Response To Comments Shared  </strong></p> 
+    </div>  
+  </div> 
+ <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> MESSAGE SENT BY:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="commentname" id="id_commentname" required maxlength="100" value="{{ contact.commentname }}" />  
+    </div>  
+</div>
+  </div>  
+
+<br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> SENDER EMAIL ADDRESS:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="commentemail" id="id_commentemail" required maxlength="100" value="{{ contact.commentemail }}" />  
+    </div>  
+</div>
+  </div>  
+
+<br/>
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> SUBJECT:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="commentsubject" id="id_commentsubject" required maxlength="254" value="{{ contact.commentsubject }}" />  
+    </div>  
+</div>
+</div>
+
+<br/>
+
+<div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> COMMENT SENT:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="commentmessage" id="id_commentmessage" required maxlength="254" value="{{ contact.commentmessage }}" />  
+    </div>  
+ 
+  </div> 
+</div>
+  <br/> 
+    <div class="row mt-1">
+      <label for="inputPassword" class="col-sm-12 col-form-label"><strong>RESPOND TO MESSAGE</strong></label>
+       <div class="col-sm-12">
+        <div class="card">
+        <textarea class="form-control" style="height: 100px"></textarea>
+                  </div>
+                </div>
+            </div>
+            <br/>
+
+    <div class="form-group row">  
+    <label class="col-sm-12 col-form-label"></label>  
+    <div class="col-sm-12">  
+         <center><a href="#" class="btn btn-success"><strong> SEND RESPONSE</strong></a></center>
+      
+    </div>  
+  </div>  
+    </div>  
+</form>  
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends 'base2.html' %}
+{% block content %}
+
+
+<section>
+
+
+<div class="container">
+	   <div class="card-title">
+              
+              <nav class="d-flex justify-content-end">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/"><strong>Home</strong></a></li>
+                  <li class="breadcrumb-item"><a href="#"><strong>Ongoing & InComing Events</strong></a></li>
+                
+                </ol>
+              </nav>
+            </div>
+        </div>
+    
+
+	{% for cause in cause_images %}
+	
+	<div class="container">
+		<div class="card-body justify-content-center">
+
+			<div class="row">
+				
+          <div class="col-xl-12">        
+          			
+          		
+          				<div class="card-title ">
+          				<h4>
+             			<center><strong>{{ cause.causetitle }}</strong></h4></center>
+             		</div>
+          		
+					<div class="card-body">
+			<center><p>"{{ cause.causedescription }}"</p></center>
+			</div>
+		
+		
+				 	<div class="row">
+
+
+				<img src="{{ cause.cause_main_img1.url }}" class="rounded-circle" style="width: 33%; float: center margin-between: 10px;" />
+
+				<img src="{{ cause.cause_main_img2.url }}" class="rounded-circle" style="width: 33%; float: center margin-between: 10px;" />
+		
+				<img src="{{ cause.cause_main_img3.url }}" class="rounded-circle" style="width: 33%; float: center margin-between: 10px;" />
+			
+				<img src="{{ cause.cause_main_img4.url }}" class="rounded-circle" style="width: 33%; float: center margin-between: 10px;" />
+					
+				<img src="{{ cause.cause_main_img5.url }}" class="rounded-circle" style="width: 33%; float: center margin-between: 10px;" />
+				
+				<img src="{{ cause.cause_main_img6.url }}" class="rounded-circle" style="width: 33%; float: center margin-between: 10px;" />
+		
+				
+
+				</div>
+		<br/>
+		
+	
+
+	
+			<div class="container">
+				<center><button type="button" class="btn btn-danger"><strong> D O N A T E </strong></button></center>
+			</div>
+
+				<br/>
+		<br/>
+			
+		
+	</div>
+
+		
+
+
+	
+</div>
+
+</div>
+
+
+
+		</section>
+
+
+	{% endfor %}
+
+
+{% endblock %}

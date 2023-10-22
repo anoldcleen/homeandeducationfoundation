@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="pagetitle">
+      <strong>ROCAF</strong>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+          <li class="breadcrumb-item"><strong>Staff</strong></li>
+          
+        </ol>
+      </nav>
+    </div>
+
+
+   <section class="section">
+      <div class="column">
+
+<table class="table table-striped">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Employee Name</th>  
+        <th>Employee Email</th>  
+        <th>Employee Contact</th>
+        <th>Employee Description</th> 
+     
+        <th>Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for employee in employees %}  
+    <tr>  
+   
+        <td>{{ employee.ename }}</td>  
+        <td>{{ employee.eemail }}</td>  
+        <td>{{ employee.econtact }}</td>
+        <td>{{ employee.edescription }}</td>
+      
+        <td>  
+            <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" ><strong>Edit Staff Record</strong></span></a>  
+<br/>
+<br/>
+            <a href="/delete/{{ employee.id }}"><strong>Delete STaff Record</strong></a>  
+
+
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+</div>
+</section>
+
+<br/>
+
+ 
+<center><a href="/emp" class="btn btn-success"><strong>ADD New Staff</strong></a></center>  
+
+
+</div>
+
+{% endblock %}
+
+

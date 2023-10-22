@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="pagetitle">
+      <h2><strong>HOME AND EDUCATION FOUNDATION UGANDA</strong></h>
+      <nav>
+         <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/emp"><strong>Staff</strong></a></li>
+          <li class="breadcrumb-item"><strong> Edit Staff</strong> </li>
+        
+        </ol>
+      </nav>
+    </div>
+
+
+
+<form method="POST" class="post-form" action="/update/{{employee.id}}">  
+        {% csrf_token %}  
+    <div class="card-body">  
+ <div class="form-group col">  
+    <label class="row-sm-12 col-form-label row-lg-20"></label>  
+
+  </div> 
+
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> STAFF NAME:  </strong></label> 
+  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+     <input type="text" name="ename" id="id_ename" required maxlength="100" value="{{ employee.ename }}" />
+      </div> 
+    </div>  
+  </div>
+
+  <br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> STAFF EMAIL:  </strong></label> 
+
+  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+     <input type="text" name="eemail" id="id_eemail" required maxlength="100" value="{{ employee.eemail }}" />
+      </div> 
+    </div>  
+  </div>
+    <br/>
+
+  <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> STAFF CONTACT:  </strong></label> 
+
+ 
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+     <input type="text" name="econtact" id="id_econtact" required maxlength="100" value="{{ employee.econtact }}" />
+      </div> 
+    </div>  
+  </div>
+    <br/>
+
+<div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> STAFF DESCRIPTION:  </strong></label> 
+
+
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+     <input type="text" name="edescription" id="id_edecsription" required maxlength="100" value="{{ employee.edescription }}" />
+      </div> 
+    </div>  
+  </div>
+    <br/>
+
+    
+
+    <br/>
+
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-12">  
+    <center><button type="submit" class="btn btn-success">Update Employee Data</button> </center> 
+    </div>  
+  </div>  
+    </div>  
+</div>
+</form>  
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+  <div class="pagetitle">
+     <strong>ROCAF</strong>
+      <nav>
+         <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dashboard"><strong>Home</strong></a></li>
+          <li class="breadcrumb-item"><strong> Recieved Feedback</strong> </li>
+        
+        </ol>
+      </nav>
+    </div>
+
+   <section class="section">
+      <div class="column">
+
+<table class="table table-striped table-bordered table-bordered">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>Name</th>  
+        <th>Email Address</th>  
+        <th>Subject </th> 
+        <th>Message</th>
+
+        <th>Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for contact in contacts %}  
+    <tr>  
+        <td>{{ contact.commentname }}</td>  
+        <td>{{ contact.commentemail }}</td>  
+        <td>{{ contact.commentsubject }}</td> 
+        <td>{{ contact.commentmessage }}</td>
+       
+       
+        <td>  
+            <a href="/editcontact/{{ contact.id }}"><span class="glyphicon glyphicon-pencil" ><strong>Respond </strong></span></a>  
+<br/>
+<br/>
+
+
+            <a href="/deletecontact/{{ contact.id }}"><strong>DELETE Message</strong> </a>  
+
+
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+</div>
+</section>
+
+<br/>
+
+
+
+ 
+</div>
+</section>
+
+
+
+</div>
+
+{% endblock %}
+
+

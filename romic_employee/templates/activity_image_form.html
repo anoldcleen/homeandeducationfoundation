@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card-body">
+
+   <div class="pagetitle">
+      <strong>ROCAF</strong>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/showactivity"><strong>Show Activities</strong></a></li>
+          <li class="breadcrumb-item"><strong>Add Recent Activity</strong></li>
+          
+        </ol>
+      </nav>
+    </div>
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+          <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> ACTIVITY TITLE:  </strong></label>  
+     <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.activitytitle }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+
+
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> BRIEF DESCRIPTION:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+       
+      {{ form.activitydescription }} 
+           </div> 
+    </div>  
+  </div> 
+ 
+  <br/>
+   <br/>
+      <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Add IMAGE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.activity_main_img1 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+        <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Add IMAGE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.activity_main_img2 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+        <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Add IMAGE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.activity_main_img3 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+        <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Add IMAGE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.activity_main_img4 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+        <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Add IMAGE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.activity_main_img5 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Add IMAGE: </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.activity_main_img6 }} 
+      </div> 
+    </div>  
+  </div> 
+
+    <br/>
+
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-12">  
+    <center><button type="submit" class="btn btn-success"><strong>UPLOAD ACTIVITY</strong></button>  </center>
+    </div>  
+  </div>  
+    </div>  
+</form>  
+
+{% endblock %}

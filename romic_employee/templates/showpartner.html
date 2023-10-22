@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+  <div class="pagetitle">
+      <h4 ><strong>PARTNERS</strong></h4>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dashboard"><strong>Home</strong></a></li>
+          <li class="breadcrumb-item"><strong>Partners</strong></li>
+        
+        </ol>
+      </nav>
+    </div>
+
+      <section class="section">
+      <div class="column">
+
+<table class="table table-striped table-bordered table-striped">  
+    <thead>  
+    <tr>  
+        <th>PARTNER  NAME</th>  
+        <th>PARTNER DESCRIPTION </th> 
+        <th>PARTNER   LOGO</th>
+
+     
+      
+        <th>Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+
+{% for partner in partner_images %}  
+
+    <tr>  
+  
+
+        <td>{{ partner.partnername }}</td>  
+        <td>{{ partner.partnerdescription }}</td> 
+        <td>{{ partner.partner_main_img }}</td>
+
+       
+
+       
+        <td>  
+           
+
+            <a href="/deletepartner/{{ partner.id }}"><strong>DELETE Partner </strong></a>  
+
+
+        </td>  
+    </tr>  
+
+    {% endfor %}
+ 
+    </tbody>  
+
+</table>  
+</div>
+<div class="card-body">
+   <center><a href="/partner" class="btn btn-success">ADD New Partner</a></center> 
+</div>
+</section>
+
+
+
+</div>
+
+{% endblock %}
+
+

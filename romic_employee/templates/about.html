@@ -1,0 +1,630 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+ <div class="pagetitle">
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#"><strong>Home</strong></a></li>
+          <li class="breadcrumb-item"><strong>About The Foundation</strong></li>
+          
+        </ol>
+      </nav>
+    </div>
+
+ <div class="col-lg-100">
+
+
+
+<form method="POST" class="post-form" action="/about">  
+        {% csrf_token %}  
+
+
+    <div class="container">  
+  
+ <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> PROJECT NAME:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.projectname }} 
+      </div> 
+    </div>  
+  </div> 
+  <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> COMPANY MISSION:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.mission }} 
+      </div> 
+    </div>  
+  </div> 
+  <br/>
+
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> COMPANY VISION:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.vision }} 
+      </div> 
+    </div>  
+  </div> 
+  <br/>
+
+    <p> <strong> OBJECTIVES </strong></p>
+
+ 
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  OBJECTIVE1:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.objective1 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  OBJECTIVE2:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.objective2 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  OBJECTIVE3:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.objective3 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  OBJECTIVE4:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.objective4 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> OBJECTIVE5:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.objective5 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+   
+  </div> 
+</div>
+   <br/>
+   <br/>
+
+
+       <p> <strong>Foundation  ADDRESS </strong></p>
+
+ 
+
+   <br/>
+   <div class="card">
+    <div class="container">
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> LOCATION 1:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.location1 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+
+   
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> LOCATION 2:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.location2 }} 
+      </div> 
+    </div>  
+  </div> 
+  <br/>
+</div>
+</div>
+
+
+   <br/>
+      <div class="card">
+    <div class="container">
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> CONTACT 1:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.contact1 }} 
+      </div> 
+    </div>  
+  </div> 
+
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> CONTACT 2:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.contact2 }} 
+      </div> 
+    </div>  
+  </div>
+  <br/>
+</div>
+</div>
+   <br/>
+   <br/>
+
+
+       <p> <strong>About TESTIMONIALS </strong></p>
+
+  <div class="card">
+    <div class="container">
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> TESTIMONIAL 1:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonial1 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  ROLE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonialrole1 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> DESCRIPTION:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonialdecription1 }} 
+      </div> 
+    </div>  
+  </div> 
+   </div>
+<br/>
+</div>
+   <br/>
+      <div class="card">
+    <div class="container">
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> TESTIMONIAL 2 :  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonial2 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> ROLE :  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonialrole2 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+   
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  DESCRIPTION :  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonialdecription2 }} 
+      </div> 
+    </div>  
+  </div> 
+   </div>
+<br/>
+</div>
+   <br/>
+     <div class="card">
+    <div class="container">
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> TESTIMONIAL 3:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonial3 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> ROLE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonialrole3 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  DECRIPTION:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonialdecription3 }} 
+      </div> 
+    </div>  
+  </div> 
+    </div>
+<br/>
+</div>
+   <br/>
+       <div class="card">
+    <div class="container">
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> TESTIMONIAL 4 :  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonial4 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  ROLE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+
+        
+      {{ form.testimonialrole4 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  DESCRIPTION:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonialdecription4 }} 
+      </div> 
+    </div>  
+  </div> 
+  </div>
+<br/>
+</div>
+
+   <br/>
+     <div class="card">
+    <div class="container">
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> TESTIMONIAL 5:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonial5 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+ 
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  ROLE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonialrole5 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  DESCRIPTION :  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.testimonialdecription5 }} 
+      </div> 
+    </div>  
+  </div> 
+</div>
+<br/>
+</div>
+
+   <br/>
+
+
+   <br/>
+    <strong>Estimated Donation Data</strong>
+     <div class="card">
+      
+    <div class="container">
+     
+      <div class="card-body">
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>Accommodation Amount:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.Amount1 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+ 
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  Accommodation status:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.status1 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Skilling Amount:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.Amount2 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+ 
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Skilling status:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.status2 }} 
+      </div> 
+    </div>  
+  </div> 
+    <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Sustainable Development Amount:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.Amount6 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+ 
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  Sustainable Development status:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.status6 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Education Amount:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.Amount3 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+ 
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  Education  Status:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.status3 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Women Empowerment Amount:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.Amount4 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+ 
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  Women Empowerment Status:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.status4 }} 
+      </div> 
+    </div>  
+  </div> 
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Climate Change Amount:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.Amount5 }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+ 
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong>  Climate Change Status:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.status5 }} 
+      </div> 
+    </div>  
+  </div> 
+
+</div>
+</div>
+</div>
+
+  <br/>
+
+
+   <br/>
+    <strong>Progress Data (Estimated Percentages)</strong>
+     <div class="card">
+      
+    <div class="container">
+     
+      <div class="card-body">
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Gender Equity:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.genderequity }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Skills:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.skills }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Education:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.education }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Climate Change:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.climatechange }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+  <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Homes:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.livelihoods }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> Susutainable Development:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+        
+      {{ form.sustainabledevelopment }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+
+</div>
+</div>
+</div>
+
+
+
+   <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-12">  
+    <center><button type="submit" class="btn btn-primary"><strong>Save About FOUNDATION</strong></button></center> 
+    </div>  
+  </div>  
+
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="pagetitle">
+      <strong>ROCAF</strong>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dashboard"><strong>Home</strong></a></li>
+          <li class="breadcrumb-item"><strong>Ongoing / Upcoming Events</strong></li>
+          
+        </ol>
+      </nav>
+    </div>
+
+
+   <section class="section">
+      <div class="column">
+
+<table class="table table-striped table-bordered table-striped">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th>CAUSE TITLE</th>  
+        <th>CAUSE DESCRIPTION</th>  
+        <th>CAUSE IMAGE1</th>
+        <th>CAUSE IMAGE2</th>
+        <th>CAUSE IMAGE3</th>
+        <th>CAUSE IMAGE4</th>
+        <th>CAUSE IMAGE5</th>
+        <th>CAUSE IMAGE6</th>
+         
+        <th>Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for cause in cause_images %}  
+    <tr>  
+   
+        <td>{{ cause.causetitle }}</td>  
+        <td>{{ cause.causedescription }}</td>  
+        <td>{{ cause.cause_main_img1  }}</td>
+        <td>{{ cause.cause_main_img2  }}</td>
+        <td>{{ cause.cause_main_img3  }}</td>
+        <td>{{ cause.cause_main_img4  }}</td>
+        <td>{{ cause.cause_main_img5  }}</td>
+        <td>{{ cause.cause_main_img6  }}</td>
+    
+        <td>  
+        
+        <a href="/deletecause/{{ cause.id }}"><strong>Delete Cause </strong></a>  
+
+
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+</div>
+</section>
+
+<br/>
+
+
+ 
+<center><a href="/causeupload" class="btn btn-success"><strong>ADD New Cause</strong></a></center>  
+<br/>
+<br/>
+
+
+</div>
+
+{% endblock %}
+
+

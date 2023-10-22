@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card-body">
+
+   <div class="pagetitle">
+      <h3><strong>ROCAF</strong></h3>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/showcause"><strong>SERVICES</strong></a></li>
+          <li class="breadcrumb-item"><strong>our Services</strong></li>
+          
+        </ol>
+      </nav>
+    </div>
+    <form method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h3><strong>SERVICES</strong></h3>
+        <br/>
+          <div class="row mt-1">
+            
+    <label class="col-sm-4 col-form-label"><strong>CATEGORY</strong></label>  
+     <div class="col-sm-12">  
+      <div class="card"> 
+      {{ form.servicecategory }} 
+      </div> 
+    </div>  
+  </div> 
+   <br/>
+
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> SERVICE TITLE:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+       
+      {{ form.servicetitle }} 
+           </div> 
+    </div>  
+  </div> 
+ 
+  <br/>
+
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> SERVICE DESCRIPTION 1:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+       
+      {{ form.servicedescription1 }} 
+           </div> 
+    </div>  
+  </div> 
+ 
+  <br/>
+
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> SERVICE DESCRIPTION 2:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+       
+      {{ form.servicedescription2 }} 
+           </div> 
+    </div>  
+  </div> 
+ 
+  <br/>
+
+   <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> SERVICE DESCRIPTION 3:  </strong></label>  
+
+    <div class="col-sm-12">  
+      <div class="card"> 
+       
+      {{ form.servicedescription3 }} 
+           </div> 
+    </div>  
+  </div> 
+ 
+  <br/>
+   <br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> SERVICE IMAGE:  </strong></label>  
+
+    <div class="col-sm-12">  
+     
+      {{ form.service_main_img }} 
+      </div> 
+    </div>  
+  </div> 
+
+
+
+
+  <br/>
+
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-12">  
+   <center> <button type="submit" class="btn btn-success">UPLOAD Services</button> </center>  
+    </div>  
+  </div>  
+    </div>  
+
+  
+ 
+
+{% endblock %}

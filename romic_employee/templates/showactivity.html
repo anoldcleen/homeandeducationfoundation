@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="pagetitle">
+      <strong>ROCAF</strong>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/dasboard"><strong>Dashboard</strong></a></li>
+          <li class="breadcrumb-item"><strong>Activities</strong></li>
+          
+        </ol>
+      </nav>
+    </div>
+
+
+   <section class="section">
+      <div class="column">
+
+<table class="table table-striped table-bordered table-bordered">  
+    <thead class="thead-dark">  
+    <tr>  
+        <th> TITLE</th>  
+        <th> DESCRIPTION</th>  
+        <th> IMAGE1</th>
+        <th> IMAGE2</th>
+        <th> IMAGE3</th>
+        <th> IMAGE4</th>
+        <th> IMAGE5</th>
+        <th> IMAGE6</th>
+         
+        <th>Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+{% for activity in activity_images %}  
+    <tr>  
+   
+        <td>{{ activity.activitytitle }}</td>  
+        <td>{{ activity.activitydescription }}</td>  
+        <td>{{ activity.activity_main_img1  }}</td>
+        <td>{{ activity.activity_main_img2  }}</td>
+        <td>{{ activity.activity_main_img3  }}</td>
+        <td>{{ activity.activity_main_img4  }}</td>
+        <td>{{ activity.activity_main_img5  }}</td>
+        <td>{{ activity.activity_main_img6  }}</td>
+    
+        <td>  
+        
+        <a href="/deleteactivity/{{ activity.id }}"><strong>Delete Activity </strong></a>  
+
+
+        </td>  
+    </tr>  
+{% endfor %}  
+    </tbody>  
+</table>  
+</div>
+</section>
+
+<br/>
+
+
+ 
+<center><a href="/activityupload" class="btn btn-success"><strong>ADD New Activity</strong></a></center>  
+<br/>
+<br/>
+
+
+</div>
+
+{% endblock %}
+
+
